@@ -1,0 +1,36 @@
+/* src/index.css ou src/styles/global.css */
+
+@font-face {
+  font-family: 'Caros';
+  src: url('./assets/fonts/Caros-Regular.woff2') format('woff2'),
+       url('./assets/fonts/Caros-Regular.woff') format('woff'),
+       url('./assets/fonts/Caros-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('./assets/fonts/Caros-Bold.woff2') format('woff2'),
+       url('./assets/fonts/Caros-Bold.woff') format('woff'),
+       url('./assets/fonts/Caros-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('./assets/fonts/Caros-Italic.woff2') format('woff2'),
+       url('./assets/fonts/Caros-Italic.woff') format('woff'),
+       url('./assets/fonts/Caros-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Ajoute d'autres variantes si nécessaire */
+
+/* TailwindCSS doit aussi être importé ici */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
