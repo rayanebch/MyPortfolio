@@ -1,8 +1,8 @@
 import React from 'react'
 const Journey = () => {
   return (
-    <div id='journey' className='h-[100vh]'>
-      <p className='font-bold text-[64px] text-[#914F1E] text-center pt-10'>Educationnel journey</p>
+    <div id='about' className='h-[100vh]'>
+      <p className='font-bold text-[64px] text-[#914F1E] text-center pt-5'>Educationnel journey</p>
       <div className=' flex items-center justify-center gap-16'>
         <div className='flex flex-col font-bold gap-44 text-[24px] max-md:hidden'>
             <p>2018-2019</p>
