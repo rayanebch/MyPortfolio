@@ -12,7 +12,7 @@ const Work = ({ onExploreMore }) => {
         <div className='flex flex-col lg:flex-row lg:justify-between lg:gap-96 text-lg lg:text-xl'>
           <p className='font-light text-[#683000]'>Perfect solution for digital experience</p>
           <p 
-            className='font-light text-sm lg:text-base text-[#FF0000] underline mt-2 mr-36 lg:mt-0 cursor-pointer'
+            className='font-light text-sm lg:text-base text-[#FF0000] underline mt-2 mr-36 lg:mt-0 cursor-pointer animate-pulse'
             onClick={onExploreMore} // Gestionnaire de clics pour afficher "Allwork"
           >
             explore more works
@@ -20,26 +20,26 @@ const Work = ({ onExploreMore }) => {
         </div>
       </div>
       {/* Cartes de travaux */}
-      <div className='flex flex-col lg:flex-row gap-8 lg:gap-16 p-4 lg:pl-16 pt-8 lg:pt-24'>
+      <div className='flex flex-col lg:flex-row gap-8 lg:gap-16 p-4 lg:pl-16 pt-8 lg:pt-24 '>
         {/* Première carte */}
-        <div className='w-full lg:w-[500px] h-[400px] lg:h-[500px] bg-[#FDCD66] rounded-xl flex flex-col justify-between p-6 lg:p-10 relative'>
-          <p className='text-white font-bold text-xl lg:text-3xl'>Site comptabilité</p>
+        <div className='w-full lg:w-[500px] h-[400px] lg:h-[500px] bg-[#FDCD66] rounded-xl flex flex-col justify-between p-6 lg:p-10 relative hover:cursor-pointer' onClick={onExploreMore}>
+          <p className='text-white font-bold text-xl lg:text-3xl'>Accounting Office Website</p>
           <img 
             src={work1}
             className='absolute bottom-0 right-0 mb-4 mr-4 object-contain w-[50%] lg:w-auto'
           />
         </div>
         {/* Deuxième carte */}
-        <div className='w-full lg:w-[500px] h-[400px] lg:h-[500px] bg-[#38756A] rounded-xl flex flex-col justify-between p-6 lg:p-10 relative'>
-          <p className='text-white font-bold text-xl lg:text-3xl'>Création d'un outil <br /> BI</p>
+        <div className='w-full lg:w-[500px] h-[400px] lg:h-[500px] bg-[#38756A] rounded-xl flex flex-col justify-between p-6 lg:p-10 relative hover:cursor-pointer' onClick={onExploreMore}>
+          <p className='text-white font-bold text-xl lg:text-3xl'>BI Tool for Causal Analysis</p>
           <img 
             src={work3}
             className='absolute bottom-0 right-0 mb-4 mr-4 object-contain w-[50%] lg:w-auto'
           />
         </div>
         {/* Troisième carte */}
-        <div className='w-full lg:w-[500px] h-[400px] lg:h-[500px] bg-[#EDB383] rounded-xl flex flex-col justify-between p-6 lg:p-10 relative'>
-          <p className='text-white font-bold text-xl lg:text-3xl'>Site d’une entreprise batiment</p>
+        <div className='w-full lg:w-[500px] h-[400px] lg:h-[500px] bg-[#EDB383] rounded-xl flex flex-col justify-between p-6 lg:p-10 relative hover:cursor-pointer' onClick={onExploreMore}>
+          <p className='text-white font-bold text-xl lg:text-3xl'>Construction Company Website</p>
           <img 
             src={work2}
             className='absolute bottom-0 right-0 mb-4 mr-4 object-contain w-[50%] lg:w-auto'

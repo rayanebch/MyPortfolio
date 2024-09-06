@@ -29,11 +29,11 @@ const Contact = () => {
           </p>
           <div className='flex flex-col gap-4 md:gap-6'>
             {/* Liste d'informations avec logos */}
-            <ContactInfo icon={github} text='rayanebch (github.com)' />
-            <ContactInfo icon={linkedin} text='Rayane Bouchenak | LinkedIn' />
-            <ContactInfo icon={gmail} text='bouchenakrayan@gmail.com' />
-            <ContactInfo icon={instagram} text='Ray Anę (@ray_ane_bch)' />
-            <ContactInfo icon={facebook} text='Facebook' />
+            <ContactInfo url='https://github.com/rayanebch' icon={github} text='rayanebch (github.com)' />
+            <ContactInfo url='https://www.linkedin.com/in/rayane-bouchenak-52951a259/' icon={linkedin} text='Rayane Bouchenak | LinkedIn' />
+            <ContactInfo url='mailto:bouchenakrayan@gmail.com' icon={gmail} text='bouchenakrayan@gmail.com' />
+            <ContactInfo url='https://www.instagram.com/rayane._.bch/' icon={instagram} text='Ray Anę (@ray_ane_bch)' />
+            <ContactInfo url='https://www.facebook.com/rayano.lemeilleur/' icon={facebook} text='Facebook' />
           </div>
         </div>
       </div>
@@ -42,11 +42,11 @@ const Contact = () => {
 };
 
 // Composant réutilisable pour les informations de contact
-const ContactInfo = ({ icon, text }) => (
-  <div className='flex items-center gap-3 md:gap-4 hover:bg-[#F3F4F6] p-2 rounded transition-all duration-300 ease-in-out'>
+const ContactInfo = ({ url, icon, text }) => (
+  <a href={url} target='_blank' rel='noopener noreferrer' className='flex items-center gap-3 md:gap-4 hover:bg-[#F3F4F6] p-2 rounded transition-all duration-300 ease-in-out'>
     <img src={icon} className='w-[30px] md:w-[40px] h-[30px] md:h-[40px]' alt='Icon' />
     <p className='text-base md:text-xl text-gray-700'>{text}</p>
-  </div>
+  </a>
 );
 
 export default Contact;

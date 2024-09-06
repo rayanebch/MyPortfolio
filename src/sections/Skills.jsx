@@ -1,4 +1,17 @@
 import React, { useRef, useEffect } from 'react';
+import pythonlogo from "../assets/icons/pythonlogo.png";
+import vscodeLogo from "../assets/icons/vscodelogo.png";
+import cssLogo from "../assets/icons/csslogo.png";
+import htmlLogo from "../assets/icons/htmllogo.png";
+import tailwindLogo from "../assets/icons/tailwindlogo.png";
+import reactLogo from "../assets/icons/reactlogo.png";
+import gitLogo from "../assets/icons/gitlogo.png";
+import photoshopLogo from "../assets/icons/photoshoplogo.png";
+import figmaLogo from "../assets/icons/figmalogo.png";
+import javaLogo from "../assets/icons/javalogo.png";
+import cLogo from "../assets/icons/clogo.png";
+import sqlLogo from "../assets/icons/sqllogo.png";
+import javascriptLogo from "../assets/icons/javascriptlogo.png";
 
 const Skills = () => {
   const skillsRef = useRef([]);
@@ -67,23 +80,40 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className='w-full h-[100vh] flex flex-col gap-16 '>
-      <p className='text-[#914F1E] font-bold flex justify-center text-5xl mt-10 max-lg:text-3xl'>
+    <div className='w-full min-h-screen flex flex-col items-center gap-16 px-4'>
+      <p className='text-[#914F1E] font-bold text-3xl md:text-4xl lg:text-5xl mt-10 text-center'>
         <span className='text-[#B5C18E]'>Skills</span>&nbsp;and tools
       </p>
-      <p className='font-extralight text-3xl flex justify-center text-center max-lg:text-2xl'>
-        Those are the tools and languages I have learned and practice with them.
+      <p className='font-extralight text-lg md:text-xl lg:text-2xl text-center'>
+        These are the tools and languages I have learned and practiced.
       </p>
+
+      {/* Section des logos */}
+      <div className='flex justify-center gap-4 flex-wrap mb-8'>
+        <img src={pythonlogo} alt='Python' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={vscodeLogo} alt='VSCode' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={cssLogo} alt='CSS' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={htmlLogo} alt='HTML' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={tailwindLogo} alt='Tailwind CSS' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={reactLogo} alt='React' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={gitLogo} alt='Git' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={photoshopLogo} alt='Photoshop' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={figmaLogo} alt='Figma' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={javaLogo} alt='Java' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={cLogo} alt='C' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={sqlLogo} alt='SQL' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+        <img src={javascriptLogo} alt='JavaScript' className='w-12 h-12 md:w-16 md:h-16 object-contain' />
+      </div>
 
       <div
         ref={containerRef}
-        className='relative w-[500px] h-[500px] border-dashed border-4 border-black rounded-full mx-auto mt-12 overflow-hidden'
+        className='relative w-[300px] h-[300px] md:w-[500px] md:h-[500px] border-dashed border-4 border-black rounded-full mx-auto overflow-hidden'
       >
-        {['python', 'VSCode', 'css', 'html', 'tailwind', 'react', 'Git', 'photoshop', 'Figma', 'java', 'C', 'sql'].map((skill, index) => (
+        {['python', 'VSCode', 'css', 'html', 'tailwind', 'react', 'Git', 'photoshop', 'Figma', 'java', 'C', 'sql', 'javascript'].map((skill, index) => (
           <span
             key={index}
             ref={(el) => (skillsRef.current[index] = el)}
-            className='text-xl font-bold absolute'
+            className='text-sm md:text-xl font-bold absolute text-[#914F1E]'
           >
             {skill}
           </span>

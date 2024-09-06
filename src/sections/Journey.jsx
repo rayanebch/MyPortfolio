@@ -2,12 +2,12 @@ import React from 'react'
 const Journey = () => {
   return (
     <div id='about' className='h-[100vh]'>
-      <p className='font-bold text-[64px] text-[#914F1E] text-center pt-5'>Educationnel journey</p>
-      <div className=' flex items-center justify-center gap-16'>
+      <p className='font-bold text-[64px] text-[#914F1E] text-center pt-5 max-md:text-[50px] '>Educational Journey</p>
+      <div className=' flex items-center justify-center gap-16 ml-60 max-lg:m-0'>
         <div className='flex flex-col font-bold gap-44 text-[24px] max-md:hidden'>
             <p>2018-2019</p>
-            <p>2021-2022</p>
-            <p>2023-2024</p>
+            <p>2019-2022</p>
+            <p>2022-2024</p>
         </div>
         <div className='max-md:hidden'>
             <svg width="44" height="721" viewBox="0 0 44 721" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,16 +26,16 @@ const Journey = () => {
         </div>
         <div className='flex flex-col pb-44 max-md:flex max-md:flec-col max-md:justify-center'>
             <div className=''>
-            <p className='font-bold text-3xl pt-16'>Baccalaureat </p>
-            <p className='font-extralight text-xl text-[#683000] pt-20 pb-20'>Baccalaureat scientifique</p>
+            <p className='font-bold text-3xl pt-16'>High School Diploma </p>
+            <p className='font-extralight text-xl text-[#683000] pt-20 pb-20'>Science Baccalaureate</p>
             </div>
             <div className='pb-12'>
-            <p className='font-bold text-3xl '>Licence professionelle</p>
-            <p className='font-extralight text-xl text-[#683000] pt-14'>licence en informatique spécialité <br></br> d’Ingénierie des Systèmes <br></br> d’Information et du Logiciel (ISIL)</p>
+            <p className='font-bold text-3xl '>Professional Bachelor's Degree</p>
+            <p className='font-extralight text-xl text-[#683000] pt-14'>Bachelor in Computer Science,<br></br> specializing in Information Systems and<br></br> Software Engineering (ISIL)</p>
             </div>
             <div className='pb-10'>
-            <p className='font-bold text-3xl'>Master 2</p>
-            <p className='font-extralight text-xl text-[#683000] pt-14'>Master Ingénierie du Logiciel a USTHB</p>
+            <p className='font-bold text-3xl'>Master's Degree</p>
+            <p className='font-extralight text-xl text-[#683000] pt-14'>Master in Software Engineering at USTHB (IL)</p>
             </div>
         </div>
       </div>

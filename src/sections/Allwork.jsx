@@ -1,64 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { projects } from '../constants/index';
 
 const Allwork = ({ onBack }) => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalImage, setModalImage] = useState('');
 
   const project = projects[currentProjectIndex];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % project.images.length
-      );
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [project.images.length]);
-
-  const openModal = (image) => {
-    setModalImage(image);
-    setIsModalOpen(true);
+  const openModal = (index) => {
+    setCurrentImageIndex(index); // Update the selected image index
+    setIsModalOpen(true); // Open the modal
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
-    setModalImage('');
+    setIsModalOpen(false); // Close the modal
   };
 
   const selectProject = (index) => {
-    setCurrentProjectIndex(index);
-    setCurrentImageIndex(0);
+    setCurrentProjectIndex(index); // Update the selected project
+    setCurrentImageIndex(0); // Reset the image index
   };
 
   const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      (prevIndex + 1) % project.images.length
-    );
+    const nextIndex = (currentImageIndex + 1) % project.images.length;
+    setCurrentImageIndex(nextIndex); // Update the current image
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      (prevIndex - 1 + project.images.length) % project.images.length
-    );
+    const prevIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+    setCurrentImageIndex(prevIndex); // Update the current image
   };
 
   return (
     <div className="flex w-full h-screen bg-[#f3f3f3] relative">
-      {/* Flèche de retour en bas à droite */}
+      {/* Back arrow button at the bottom left */}
       <button
-        onClick={onBack} // Ajout du gestionnaire de clic pour revenir à la page principale
+        onClick={onBack}
         className="absolute bottom-4 left-4 text-2xl text-[#FF0000] z-10"
       >
-        &larr; Retour
+        &larr; Back
       </button>
 
-      {/* Navbar à gauche */}
+      {/* Navbar on the left */}
       <div className="w-1/4 bg-white shadow-md p-4">
-        <h2 className="text-2xl font-bold mb-4">Projets</h2>
+        <h2 className="text-2xl font-bold mb-4">Projects</h2>
         <ul className="space-y-2">
           {projects.map((proj, index) => (
             <li
@@ -74,27 +60,27 @@ const Allwork = ({ onBack }) => {
         </ul>
       </div>
 
-      {/* Contenu du projet sélectionné à droite */}
+      {/* Content of the selected project on the right */}
       <div className="w-3/4 p-8 flex flex-col justify-start items-start">
         <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
         <p className="text-lg text-gray-600 mb-8">{project.description}</p>
         
-        <div className="w-full h-[500px] relative overflow-hidden flex justify-center items-center">
+        <div className="w-full h-[600px] relative overflow-hidden flex justify-center items-center">
           {project.images.map((image, index) => (
             <img
               key={index}
               src={image}
               alt={`Image ${index + 1}`}
-              className={`absolute max-w-[500px] max-h-[500px] object-contain transition-opacity duration-500 cursor-pointer ${
+              className={`absolute max-w-[700px] max-h-[500px] object-contain transition-opacity duration-500 cursor-pointer ${
                 index === currentImageIndex ? 'opacity-100' : 'opacity-0'
               }`}
-              onClick={() => openModal(image)}
+              onClick={() => openModal(index)} // Pass the clicked image index
             />
           ))}
-          <button onClick={prevImage} className="absolute left-2 text-2xl text-gray-500">
+          <button onClick={prevImage} className="absolute left-2 text-2xl text-grey-500">
             &larr;
           </button>
-          <button onClick={nextImage} className="absolute right-2 text-2xl text-gray-500">
+          <button onClick={nextImage} className="absolute right-2 text-2xl text-grey-500">
             &rarr;
           </button>
         </div>
@@ -103,16 +89,22 @@ const Allwork = ({ onBack }) => {
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
           <img 
-            src={modalImage} 
-            alt="Fullscreen" 
+            src={project.images[currentImageIndex]} // Use the current index to display the correct image
+            alt={`Image ${currentImageIndex + 1} Fullscreen`} 
             className="max-w-full max-h-full"
             onClick={closeModal}
           />
           <button
-            className="absolute top-4 right-4 text-white text-3xl"
+            className="absolute top-4 right-4 text-[#FF0000] text-3xl"
             onClick={closeModal}
           >
             &times;
+          </button>
+          <button onClick={prevImage} className="absolute left-2 text-2xl text-[#FF0000]">
+            &larr;
+          </button>
+          <button onClick={nextImage} className="absolute right-2 text-2xl text-[#FF0000]">
+            &rarr;
           </button>
         </div>
       )}
