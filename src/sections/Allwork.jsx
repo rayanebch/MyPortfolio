@@ -9,32 +9,32 @@ const Allwork = ({ onBack }) => {
   const project = projects[currentProjectIndex];
 
   const openModal = (index) => {
-    setCurrentImageIndex(index); // Update the selected image index
-    setIsModalOpen(true); // Open the modal
+    setCurrentImageIndex(index); 
+    setIsModalOpen(true); 
   };
 
   const closeModal = () => {
-    setIsModalOpen(false); // Close the modal
+    setIsModalOpen(false); 
   };
 
   const selectProject = (index) => {
-    setCurrentProjectIndex(index); // Update the selected project
-    setCurrentImageIndex(0); // Reset the image index
+    setCurrentProjectIndex(index); 
+    setCurrentImageIndex(0); 
   };
 
   const nextImage = () => {
     const nextIndex = (currentImageIndex + 1) % project.images.length;
-    setCurrentImageIndex(nextIndex); // Update the current image
+    setCurrentImageIndex(nextIndex); 
   };
 
   const prevImage = () => {
     const prevIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
-    setCurrentImageIndex(prevIndex); // Update the current image
+    setCurrentImageIndex(prevIndex); 
   };
 
   return (
     <div className="flex w-full h-screen bg-[#f3f3f3] relative">
-      {/* Back arrow button at the bottom left */}
+
       <button
         onClick={onBack}
         className="absolute bottom-4 left-4 text-2xl text-[#FF0000] z-10"
@@ -42,7 +42,7 @@ const Allwork = ({ onBack }) => {
         &larr; Back
       </button>
 
-      {/* Navbar on the left */}
+
       <div className="w-1/4 bg-white shadow-md p-4">
         <h2 className="text-2xl font-bold mb-4">Projects</h2>
         <ul className="space-y-2">
@@ -60,7 +60,7 @@ const Allwork = ({ onBack }) => {
         </ul>
       </div>
 
-      {/* Content of the selected project on the right */}
+
       <div className="w-3/4 p-8 flex flex-col justify-start items-start">
         <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
         <p className="text-lg text-gray-600 mb-8">{project.description}</p>
@@ -74,7 +74,7 @@ const Allwork = ({ onBack }) => {
               className={`absolute max-w-[700px] max-h-[500px] object-contain transition-opacity duration-500 cursor-pointer ${
                 index === currentImageIndex ? 'opacity-100' : 'opacity-0'
               }`}
-              onClick={() => openModal(index)} // Pass the clicked image index
+              onClick={() => openModal(index)} 
             />
           ))}
           <button onClick={prevImage} className="absolute left-2 text-2xl text-grey-500">
@@ -89,7 +89,7 @@ const Allwork = ({ onBack }) => {
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
           <img 
-            src={project.images[currentImageIndex]} // Use the current index to display the correct image
+            src={project.images[currentImageIndex]} 
             alt={`Image ${currentImageIndex + 1} Fullscreen`} 
             className="max-w-full max-h-full"
             onClick={closeModal}
