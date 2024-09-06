@@ -2,7 +2,7 @@ import React from 'react'
 const Journey = () => {
   return (
     <div id='about' className='h-[100vh]'>
-      <p className='font-bold text-[64px] text-[#914F1E] text-center pt-5 max-md:text-[50px] '>Educational Journey</p>
+      <p className='font-bold text-[64px] text-[#914F1E] text-center pt-5 max-md:text-[35px] max-md:pt-10 '>Educational Journey</p>
       <div className=' flex items-center justify-center gap-16 ml-60 max-lg:m-0'>
         <div className='flex flex-col font-bold gap-44 text-[24px] max-md:hidden'>
             <p>2018-2019</p>
@@ -24,18 +24,18 @@ const Journey = () => {
             <line x1="23.5" y1="493" x2="23.5" y2="679" stroke="black" stroke-width="3" stroke-dasharray="6 6"/>
             </svg>
         </div>
-        <div className='flex flex-col pb-44 max-md:flex max-md:flec-col max-md:justify-center'>
-            <div className=''>
-            <p className='font-bold text-3xl pt-16'>High School Diploma </p>
-            <p className='font-extralight text-xl text-[#683000] pt-20 pb-20'>Science Baccalaureate</p>
+        <div className='flex flex-col pb-44 max-md:flex max-md:flex-col max-md:justify-center max-md:m-0'>
+            <div className='max-md:p-4'>
+            <p className='font-bold text-3xl pt-16 '>High School Diploma </p>
+            <p className='font-extralight text-xl text-[#683000] pt-20 pb-20 max-md:py-8'>Science Baccalaureate</p>
             </div>
-            <div className='pb-12'>
+            <div className='pb-12 max-md:p-4'>
             <p className='font-bold text-3xl '>Professional Bachelor's Degree</p>
-            <p className='font-extralight text-xl text-[#683000] pt-14'>Bachelor in Computer Science,<br></br> specializing in Information Systems and<br></br> Software Engineering (ISIL)</p>
+            <p className='font-extralight text-xl text-[#683000] pt-14 max-md:py-8'>Bachelor in Computer Science,<br></br> specializing in Information Systems and<br></br> Software Engineering (ISIL)</p>
             </div>
-            <div className='pb-10'>
+            <div className='pb-10 max-md:p-4'>
             <p className='font-bold text-3xl'>Master's Degree</p>
-            <p className='font-extralight text-xl text-[#683000] pt-14'>Master in Software Engineering at USTHB (IL)</p>
+            <p className='font-extralight text-xl text-[#683000] pt-14 max-md:py-8'>Master in Software Engineering at USTHB (IL)</p>
             </div>
         </div>
       </div>

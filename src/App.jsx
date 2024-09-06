@@ -11,7 +11,7 @@ export default function App() {
   const handleBackToMain = () => {
     setCurrentPage("main");
   };
-
+  const basename = import.meta.env.MODE == "production" ? "/MyPortfolio" : "";
   return (
     <div className="font-caros">
       {currentPage === "main" ? (
