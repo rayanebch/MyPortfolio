@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import rayaneicon from "../assets/images/rayaneicon.png";
 import etageres from "../assets/images/etageres.png";
 import doublearrow from "../assets/icons/double_arrow.png";
@@ -7,6 +7,31 @@ import lampe2 from "../assets/images/lampe2.png";
 
 const Home = ({ onShowPages }) => {
   const [isLampeOn, setIsLampeOn] = useState(true);
+
+  useEffect(() => {
+    // Fonction pour simuler le clignotement de la lampe
+    const simulateFlicker = () => {
+      let flickerCount = 0; // Compteur pour le nombre de clignotements
+      const flickerInterval = setInterval(() => {
+        setIsLampeOn((prev) => !prev); // Change l'état de la lampe
+        flickerCount += 1;
+        
+        // Arrête le clignotement après 6 changements d'état (3 allumages/3 extinctions)
+        if (flickerCount >= 6) {
+          clearInterval(flickerInterval);
+          setIsLampeOn(true); // Rétablit l'état final de la lampe allumée
+        }
+      }, 300); // Intervalle court pour un effet de clignotement rapide
+    };
+
+    // Définit un intervalle qui déclenche le clignotement toutes les 5 secondes
+    const mainInterval = setInterval(() => {
+      simulateFlicker(); // Simule le clignotement
+    }, 5000);
+
+    // Nettoyage de l'intervalle lorsque le composant est démonté
+    return () => clearInterval(mainInterval);
+  }, []);
 
   const handleShowAllPages = () => {
     onShowPages();
