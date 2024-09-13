@@ -1,5 +1,6 @@
 import React from 'react';
 import rayaneicon from "../assets/images/rayanecontact.png";
+import rayaneicon2 from "../assets/images/rayanecontact2.png";
 import github from "../assets/icons/github.png";
 import linkedin from "../assets/icons/linkedin.png";
 import gmail from "../assets/icons/gmail.png";
@@ -16,7 +17,7 @@ const Contact = () => {
             Let’s make something<br/> amazing together.
           </p>
           <img 
-            src={rayaneicon}
+            src={rayaneicon2}
             className='w-[200px] md:w-[300px] lg:w-[350px] '
             alt='Rayane Icon'
           />

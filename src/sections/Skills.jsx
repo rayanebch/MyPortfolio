@@ -81,8 +81,8 @@ const Skills = () => {
 
   return (
     <div className='w-full min-h-screen flex flex-col items-center gap-16 px-4'>
-      <p className='text-[#914F1E] font-bold text-3xl md:text-4xl lg:text-5xl mt-10 text-center'>
-        <span className='text-[#B5C18E]'>Skills</span>&nbsp;and tools
+      <p className='text-[#914F1E]  font-bold text-3xl md:text-4xl lg:text-5xl mt-10 text-center'>
+        <span className='text-[#B5C18E] '>Skills</span>&nbsp;and tools
       </p>
       <p className='font-extralight text-lg md:text-xl lg:text-2xl text-center'>
         These are the tools and languages I have learned and practiced.
