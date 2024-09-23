@@ -17,7 +17,11 @@ import work3Image1 from '../assets/images/works3/image1.png';
 import work3Image2 from '../assets/images/works3/image 2.png';
 import work3Image3 from '../assets/images/works3/image 3.png';
 import work3Image4 from '../assets/images/works3/image 4.png';
-
+//project 4
+import work4Image1 from '../assets/images/works4/image 1.png';
+import work4Image2 from '../assets/images/works4/image 2.png';
+import work4Image3 from '../assets/images/works4/image 3.png';
+import work4Image4 from '../assets/images/works4/image 4.png';
 export const projects = [
   {
     title: 'Accounting Office Website',
@@ -33,5 +37,10 @@ export const projects = [
     title: 'Construction Company Website',
     description: 'A dynamic and visually engaging website for a construction company, featuring a modern design to attract potential clients and showcase completed projects.',
     images: [work3Image1, work3Image2, work3Image3, work3Image4], 
+  },
+  {
+    title: 'Notes app',
+    description: 'A dynamic and visually engaging website for a construction company, featuring a modern design to attract potential clients and showcase completed projects.',
+    images: [work4Image1, work4Image2, work4Image3, work4Image4], 
   },
 ];
