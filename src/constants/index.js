@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     title: 'Notes app',
-    description: 'A dynamic and visually engaging website for a construction company, featuring a modern design to attract potential clients and showcase completed projects.',
+    description: 'The Note-Taking Application is a web-based tool designed to help users organize and manage their notes efficiently. With a clean and intuitive interface, users can easily create, edit, and delete notes, making it a perfect companion for students, professionals, or anyone looking to keep track of their thoughts and tasks.',
     images: [work4Image1, work4Image2, work4Image3, work4Image4], 
   },
 ];
